@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: reserved
+  title: MyString
+  reserved_by_email: john@doe.com
+
+two:
+  status: checked_out
+  title: MyString
+  reserved_by_email: ""

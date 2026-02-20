@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :books do
+    post "reserve", to: "books/reserve#execute"
+  end
 end
