@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-    enum :status, {available: "available", reserved: "reserved", checked_out: "checked_out"}
+    enum :status, { available: "available", reserved: "reserved", checked_out: "checked_out" }
 
     validates :title, presence: true
 

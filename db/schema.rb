@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_20_004249) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_20_124732) do
   create_table "books", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "reserved_by_email"
     t.string "status", default: "available", null: false
     t.string "title", null: false
     t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_books_on_created_at"
+    t.index ["status", "title"], name: "index_books_on_status_and_title"
     t.check_constraint "status IN ('available', 'reserved', 'checked_out')", name: "status_check"
   end
 end
